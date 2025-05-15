@@ -19,16 +19,9 @@ function ReservedItem({ item }) {
       title={item.fieldName}
       style={{ marginBottom: 16 }}
       extra={
-        <Popconfirm
-          title="Rezervasyonu iptal etmek istediğinize emin misiniz?"
-          onConfirm={handleCancel}
-          okText="Evet"
-          cancelText="Hayır"
-        >
-          <Button style={{background:'red'}} type="primary">
+          <Button style={{background:'red'}} onClick={handleCancel} type="primary">
             İptal Et
           </Button>
-        </Popconfirm>
       }
     >
       <Descriptions column={1} size="middle">
